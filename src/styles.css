@@ -12,3 +12,6 @@ body {
 .mat-drawer {
   width: 20vw;
 }
+.mat-card {
+  width: 85%;
+}
