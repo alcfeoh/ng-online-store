@@ -5,7 +5,7 @@
   <span>Ng Online Store</span>
 </mat-toolbar>
 <mat-sidenav-container class="example-sidenav-fab-container">
-  <mat-sidenav #sidenav mode="side" opened="true">
+  <mat-sidenav #sidenav mode="over" opened="false">
     <mat-list>
       <mat-list-item>
         <mat-icon>shopping_basket</mat-icon>
@@ -20,10 +20,11 @@
         Your account
       </mat-list-item>
     </mat-list>
-  </mat-sidenav>
-  <mat-grid-list cols="4" rowHeight="fit" gutterSize="5">
+  </mat-sidenav>*
+  // TODO: Use Flexbox instead of mat-grid-list
+  <mat-grid-list  rowHeight="fit" gutterSize="5">
     <mat-grid-tile>
-      <mat-card class="example-card">
+      <mat-card class="">
         <mat-card-header>
           <mat-card-title>Shiba Inu</mat-card-title>
         </mat-card-header>
