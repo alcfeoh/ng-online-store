@@ -1,55 +1,55 @@
-<mat-toolbar color="warn">
-  <button mat-icon-button (click)="sidenav.toggle()">
-    <mat-icon>menu</mat-icon>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="#">License Plate Store</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
   </button>
-  <span>Ng Online Store</span>
-</mat-toolbar>
-<mat-sidenav-container class="example-sidenav-fab-container">
-  <mat-sidenav #sidenav mode="over" opened="false">
-    <mat-list>
-      <mat-list-item>
-        <mat-icon>shopping_basket</mat-icon>
-        Items
-      </mat-list-item>
-      <mat-list-item>
-        <mat-icon>shopping_cart</mat-icon>
-         Your Cart
-      </mat-list-item>
-      <mat-list-item>
-        <mat-icon>account_circle</mat-icon>
-        Your account
-      </mat-list-item>
-    </mat-list>
-  </mat-sidenav>*
-  // TODO: Use Flexbox instead of mat-grid-list
-  <mat-grid-list  rowHeight="fit" gutterSize="5">
-    <mat-grid-tile>
-      <mat-card class="">
-        <mat-card-header>
-          <mat-card-title>Shiba Inu</mat-card-title>
-        </mat-card-header>
-        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-        <mat-card-content>
-          <p>
-            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button>BUY</button>
-          <button mat-button>MORE INFO</button>
-        </mat-card-actions>
-      </mat-card>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <mat-card>Simple card 2</mat-card>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <mat-card>Simple card 3</mat-card>
-    </mat-grid-tile>
-    <mat-grid-tile>4</mat-grid-tile>
-    <mat-grid-tile>5</mat-grid-tile>
-    <mat-grid-tile>6</mat-grid-tile>
-    <mat-grid-tile>7</mat-grid-tile>
-    <mat-grid-tile>8</mat-grid-tile>
-  </mat-grid-list>
-</mat-sidenav-container>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="cart.html">My cart <span class="sr-only"></span></a>
+      </li>
+
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<main role="main">
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">Welcome to our store</h1>
+      <p>Browse our collection of License Plates below</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="col-md-4" style="margin-top: 40px" ng-repeat="plate in plates">
+        <h2>{{plate.title}}</h2>
+        <img src="{{plate.picture}}" class="img-fluid" alt="Responsive image">
+        <p>{{plate.description}}</p>
+        <div>
+          <h2 class="float-left">${{plate.price}}</h2><a class="btn btn-primary float-right" href="#" role="button" ng-click="addToCart(plate._id)">Add to cart &raquo;</a>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+  </div> <!-- /container -->
+
+</main>
+
+<footer class="container">
+  <p>&copy; License Plate Store 2017</p>
+</footer>
