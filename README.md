@@ -2,9 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
 
-## Development server
+## Development server (front-end)
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Backend server
+
+Run `npm run server` to start the backend server. Navigate to `http://localhost:8000/data` to see some data served by that backend. 
+The store front-end app needs that backend to run in order to display data.
 
 ## Code scaffolding
 
