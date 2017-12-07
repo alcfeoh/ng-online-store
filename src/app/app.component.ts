@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {LicensePlateService} from './license-plate.service';
+import {LicensePlate} from './license-plate';
 
 @Component({
   selector: 'ngs-root',
@@ -6,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ngs';
+
+  licensePlates: LicensePlate[];
+
+  constructor(private service: LicensePlateService) {
+    service.getAllPlates().subscribe(plates => this.licensePlates = plates);
+  }
 }
