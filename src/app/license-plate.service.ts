@@ -9,7 +9,7 @@ export class LicensePlateService {
   constructor(private http: HttpClient) { }
 
   getAllPlates(): Observable<LicensePlate[]> {
-      return this.http.get<LicensePlate[]>('http://localhost/8000/data');
+      return this.http.get<LicensePlate[]>('http://localhost:8000/data');
   }
 
 }
