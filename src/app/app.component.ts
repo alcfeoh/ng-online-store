@@ -14,4 +14,8 @@ export class AppComponent {
   constructor(private service: LicensePlateService) {
     service.getAllPlates().subscribe(plates => this.licensePlates = plates);
   }
+
+  addToCart(event: LicensePlate): void {
+    alert(`License plate '${event.title}' added to cart`);
+  }
 }

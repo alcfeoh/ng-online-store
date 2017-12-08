@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {LicensePlate} from '../license-plate';
 
 @Component({
   selector: 'ngs-license-plate',
@@ -6,6 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./license-plate.component.css']
 })
 export class LicensePlateComponent {
+
+  @Input()
+  plate: LicensePlate;
+
+  @Output()
+  onAddToCart = new EventEmitter<LicensePlate>();
 
   constructor() { }
 

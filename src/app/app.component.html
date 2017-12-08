@@ -33,10 +33,12 @@
 
   <div class="container">
     <!-- Example row of columns -->
-    <div class="row">
-      <ngs-license-plate></ngs-license-plate>
-      <ngs-license-plate></ngs-license-plate>
-      <ngs-license-plate></ngs-license-plate>
+    <div class="row" >
+      <ngs-license-plate *ngFor="let plate of licensePlates" [plate]="plate" (onAddToCart)="addToCart($event)"
+                         class="col-md-4" style="margin-top: 40px">
+
+      </ngs-license-plate>
+
     </div>
 
     <hr>
