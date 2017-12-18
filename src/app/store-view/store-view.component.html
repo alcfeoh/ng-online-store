@@ -1,0 +1,15 @@
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<ngs-jumbotron title="Welcome to our store" description="Browse our collection of License Plates below"></ngs-jumbotron>
+
+<div class="container">
+  <!-- Example row of columns -->
+  <div class="row" >
+    <ngs-license-plate *ngFor="let plate of plates | async" [plate]="plate" (onAddToCart)="addToCart($event)"
+                       class="col-md-4" style="margin-top: 40px">
+
+    </ngs-license-plate>
+  </div>
+
+  <hr>
+
+</div> <!-- /container -->

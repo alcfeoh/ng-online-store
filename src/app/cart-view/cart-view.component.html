@@ -1,0 +1,16 @@
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<ngs-jumbotron title="My Cart" description="Your current cart contents:"></ngs-jumbotron>
+
+<div class="container">
+  <!-- Example row of columns -->
+  <div class="row" >
+    <ngs-license-plate *ngFor="let plate of cartContents | async" [plate]="plate"
+                       class="col-md-4" style="margin-top: 40px">
+
+    </ngs-license-plate>
+
+  </div>
+
+  <hr>
+
+</div> <!-- /container -->
