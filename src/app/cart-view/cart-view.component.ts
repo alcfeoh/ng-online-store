@@ -16,4 +16,11 @@ export class CartViewComponent {
     this.cartContents = service.getCartContents();
   }
 
+  removeFromCart(plate: LicensePlate) {
+    this.service.removeFromCart(plate).subscribe(done => {
+        this.cartContents = this.service.getCartContents();
+        alert(`Plate '${plate.title}' removed from cart`);
+      });
+  }
+
 }

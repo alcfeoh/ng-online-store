@@ -4,8 +4,8 @@
 <div class="container">
   <!-- Example row of columns -->
   <div class="row" >
-    <ngs-license-plate *ngFor="let plate of plates | async" [plate]="plate" (onAddToCart)="addToCart($event)"
-                       class="col-md-4" style="margin-top: 40px">
+    <ngs-license-plate *ngFor="let plate of plates | async" [plate]="plate" (onButtonClick)="addToCart($event)"
+                       buttonText="Add to cart &raquo;" class="col-md-4" style="margin-top: 40px">
 
     </ngs-license-plate>
   </div>

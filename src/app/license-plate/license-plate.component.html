@@ -3,5 +3,7 @@
 <p>{{plate.description}}</p>
 <div>
   <h2 class="float-left">${{plate.price}}</h2>
-  <a class="btn btn-primary float-right" href="#" role="button" (click)="onAddToCart.emit(plate)">Add to cart &raquo;</a>
+  <button class="btn btn-primary float-right"  role="button" (click)="onButtonClick.emit(plate)">
+    {{buttonText}}
+  </button>
 </div>

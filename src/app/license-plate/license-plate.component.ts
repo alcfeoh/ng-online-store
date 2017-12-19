@@ -11,8 +11,11 @@ export class LicensePlateComponent {
   @Input()
   plate: LicensePlate;
 
+  @Input()
+  buttonText: string;
+
   @Output()
-  onAddToCart = new EventEmitter<LicensePlate>();
+  onButtonClick = new EventEmitter<LicensePlate>();
 
   constructor() { }
 
