@@ -10,15 +10,15 @@ import {CartService} from '../cart.service';
 })
 export class CartViewComponent {
 
-  cartContents: Observable<LicensePlate[]>;
+  cartContents: LicensePlate[];
 
   constructor(private service: CartService) {
-    this.cartContents = service.getCartContents();
+    service.getCartContents().subscribe(data => this.cartContents = data);
   }
 
   removeFromCart(plate: LicensePlate) {
     this.service.removeFromCart(plate).subscribe(done => {
-        this.cartContents = this.service.getCartContents();
+        this.service.getCartContents().subscribe(data => this.cartContents = data);
         alert(`Plate '${plate.title}' removed from cart`);
       });
   }
