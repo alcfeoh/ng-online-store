@@ -11,6 +11,9 @@ import { StoreViewComponent } from './store-view/store-view.component';
 import { CartViewComponent } from './cart-view/cart-view.component';
 import {AppRoutingModule} from './app-routing.module';
 import {RouterModule} from '@angular/router';
+import { CheckoutFormComponent } from './checkout-form/checkout-form.component';
+import {CheckoutViewComponent} from './checkout-view/checkout-view.component';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -19,10 +22,12 @@ import {RouterModule} from '@angular/router';
     LicensePlateComponent,
     JumbotronComponent,
     StoreViewComponent,
-    CartViewComponent
+    CartViewComponent,
+    CheckoutFormComponent,
+    CheckoutViewComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule, RouterModule, AppRoutingModule
+    BrowserModule, HttpClientModule, RouterModule, AppRoutingModule, FormsModule
   ],
   providers: [LicensePlateService, CartService],
   bootstrap: [AppComponent]
