@@ -27,8 +27,9 @@
   <br>
   <div class="row">
     <div class="col-lg-6">
+      <div class="alert alert-danger" role="alert" [hidden]="zip.valid || zip.pristine">Please enter a 5-digit zipcode</div>
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Zip" name="zip" ngModel>
+        <input type="text" class="form-control" placeholder="Zip" name="zip" ngModel required  pattern="[0-9]{5}" #zip="ngModel">
       </div>
     </div>
     <div class="col-lg-6">
@@ -40,8 +41,10 @@
   <br>
   <div class="row">
     <div class="col-lg-6">
+      <div class="alert alert-danger" role="alert" [hidden]="cc.valid || cc.pristine">Please enter a valid credit card number</div>
       <div class="input-group">
-        <input type="password" class="form-control" placeholder="Credit card number" name="cc" ngModel>
+        <input type="password" class="form-control" placeholder="Credit card number" name="cc" ngModel required  pattern="[0-9]{16}" #cc="ngModel">
+        <span class="input-group-addon" >CC</span>
       </div>
     </div>
     <div class="col-lg-6">
