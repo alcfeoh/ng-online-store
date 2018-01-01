@@ -14,6 +14,7 @@ import {RouterModule} from '@angular/router';
 import { CheckoutFormComponent } from './checkout-form/checkout-form.component';
 import {CheckoutViewComponent} from './checkout-view/checkout-view.component';
 import {FormsModule} from '@angular/forms';
+import { CreditCardImageDirective } from './credit-card-image.directive';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import {FormsModule} from '@angular/forms';
     StoreViewComponent,
     CartViewComponent,
     CheckoutFormComponent,
-    CheckoutViewComponent
+    CheckoutViewComponent,
+    CreditCardImageDirective
   ],
   imports: [
     BrowserModule, HttpClientModule, RouterModule, AppRoutingModule, FormsModule
