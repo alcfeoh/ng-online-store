@@ -15,6 +15,7 @@ import { CheckoutFormComponent } from './checkout-form/checkout-form.component';
 import {CheckoutViewComponent} from './checkout-view/checkout-view.component';
 import {FormsModule} from '@angular/forms';
 import { CreditCardImageDirective } from './credit-card-image.directive';
+import { NavigationComponent } from './navigation/navigation.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { CreditCardImageDirective } from './credit-card-image.directive';
     CartViewComponent,
     CheckoutFormComponent,
     CheckoutViewComponent,
-    CreditCardImageDirective
+    CreditCardImageDirective,
+    NavigationComponent
   ],
   imports: [
     BrowserModule, HttpClientModule, RouterModule, AppRoutingModule, FormsModule
